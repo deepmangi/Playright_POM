@@ -42,6 +42,7 @@ public class BaseTest {
 		page.context().browser().close();
 	}
 	
+	//assert Equals
 	public void areEqual(String actualValue,String ExpectedValue) {
 		Assert.assertEquals(actualValue, ExpectedValue);
 	}

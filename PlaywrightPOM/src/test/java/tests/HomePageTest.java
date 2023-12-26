@@ -23,7 +23,7 @@ public class HomePageTest extends BaseTest {
 	}
 
 	@DataProvider
-	public Object[][] getProductData() {
+	public Object[][] getProductsData() {
 		return new Object[][] {
 				{ "Macbook" }, 
 				{ "iMac" }, 
@@ -31,7 +31,7 @@ public class HomePageTest extends BaseTest {
 		};
 	}
 
-	@Test(dataProvider = "getProductData")
+	@Test(dataProvider = "getProductsData")
 	public void searchTest(String productName) throws InterruptedException {
 		Thread.sleep(5000);
 		String actualSearchHeader = homePage.doSearch(productName);

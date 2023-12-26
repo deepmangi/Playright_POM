@@ -120,7 +120,7 @@ public class PlaywrightFactory {
 			System.out.println(string);
 		}
 
-		//find method
+		//find element method
 		public Locator find(String path) {
 			return page.locator(path);
 		}
