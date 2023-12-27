@@ -2,7 +2,9 @@ package pages;
 
 import com.microsoft.playwright.Page;
 
-public class LoginPage {
+import factory.PlaywrightFactory;
+
+public class LoginPage extends PlaywrightFactory{
 
 	private Page page;
 

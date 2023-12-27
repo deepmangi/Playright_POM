@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.Properties;
 
+import org.testng.Assert;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
@@ -149,6 +151,15 @@ public class PlaywrightFactory {
 		public void goback() {
 			page.goBack();
 		}
-
+		
+		//assert Equals
+		public void isEqual(String actualValue,String ExpectedValue) {
+			Assert.assertEquals(actualValue, ExpectedValue);
+		}
+		
+		//assert True
+		public void isTrue(boolean arg) {
+			Assert.assertTrue(arg);
+		}
 
 }

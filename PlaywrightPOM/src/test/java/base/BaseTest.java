@@ -2,7 +2,6 @@ package base;
 
 import java.util.Properties;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -41,10 +40,4 @@ public class BaseTest {
 	public void tearDown() {
 		page.context().browser().close();
 	}
-	
-	//assert Equals
-	public void areEqual(String actualValue,String ExpectedValue) {
-		Assert.assertEquals(actualValue, ExpectedValue);
-	}
-
 }
