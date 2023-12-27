@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -12,14 +13,14 @@ public class HomePageTest extends BaseTest {
 	public void homePageTitleTest() {
 		String actualTitle = homePage.getHomePageTitle();
 		
-		homePage.isEqual(actualTitle, AppConstants.HOME_PAGE_TITLE);
+		Assert.assertEquals(actualTitle, AppConstants.HOME_PAGE_TITLE);
 	}
 
 	@Test(priority=1)
 	public void homePageURLTest() {
 		String actualURL = homePage.getHomePageURL();
 		
-		homePage.isEqual(actualURL, prop.getProperty("url"));
+		Assert.assertEquals(actualURL, prop.getProperty("url"));
 	}
 
 	@DataProvider
@@ -35,7 +36,7 @@ public class HomePageTest extends BaseTest {
 	public void searchTest(String productName) throws InterruptedException {
 		Thread.sleep(5000);
 		String actualSearchHeader = homePage.doSearch(productName);
-		homePage.isEqual(actualSearchHeader, "Search - " + productName);
+		Assert.assertEquals(actualSearchHeader, "Search - " + productName);
 	}
 
 }

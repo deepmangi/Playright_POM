@@ -10,7 +10,6 @@ import com.microsoft.playwright.Page;
 
 import factory.PlaywrightFactory;
 import pages.HomePage;
-import pages.LoginPage;
 
 public class BaseTest {
 
@@ -19,7 +18,6 @@ public class BaseTest {
 	protected Properties prop;
 
 	protected HomePage homePage;
-	protected LoginPage loginPage;
 
 	@Parameters({ "browser" })
 	@BeforeTest
